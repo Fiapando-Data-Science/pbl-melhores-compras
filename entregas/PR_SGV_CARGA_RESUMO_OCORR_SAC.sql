@@ -1,4 +1,4 @@
--- TRUNCATE TABLE mc_sgv_ocorrencia_sac
+--TRUNCATE TABLE mc_sgv_ocorrencia_sac;
 
 -- c) Verificar se a tabela está vazia (ANTES da execução da procedure)
 SELECT COUNT(*) FROM mc_sgv_ocorrencia_sac;
@@ -14,6 +14,8 @@ COMMIT;
 
 -- f) Verificar se a tabela foi carregada (DEPOIS da execução da procedure)
 SELECT COUNT(*) FROM mc_sgv_ocorrencia_sac;
+
+select * from mc_sgv_ocorrencia_sac;
 
 -- a) Criação da stored procedure a partir do bloco anônimo
 
@@ -50,8 +52,6 @@ BEGIN
 
     -- b) Limpar os dados da tabela MC_SGV_OCORRENCIA_SAC
     EXECUTE IMMEDIATE 'TRUNCATE TABLE mc_sgv_ocorrencia_sac';
-
-    -- c) (Fora da procedure: você fará um SELECT COUNT(*) para validar)
 
     -- d) Abrir o cursor e processar os registros
     OPEN c_abertura_sac;
