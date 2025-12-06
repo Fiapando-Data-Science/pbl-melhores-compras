@@ -6,33 +6,60 @@ Repositório do projeto PBL (Data Science/Engenharia de Dados) da empresa fictí
 
 ## Estrutura do Repositório
 
-- `main.py`: utilitário ou ponto de entrada para execuções pontuais.
-- `pyproject.toml`: metadados e dependências do projeto.
-- `Fase 4/`: notebooks/SQL da fase 4 (EDA e carga SAC).
-- `Fase 5/`: notebooks da fase 5 (análises e modelagem em evolução).
-- `Fase 6/`: reservado para entregas da fase 6.
-- `Fase 7/`: dados e relatórios da fase 7 (`data/Clientes.xml`, `reports/`).
-- `.gitignore`: inclui `componentes.txt` (sensível) e artefatos temporários.
+| Fase | Projeto | Foco Técnico | O que foi desenvolvido |
+| :--- | :--- | :--- | :--- |
+| **01** | **[SGV Genesis: Database & Logic](./Fase1-SGV-Genesis-Database-Modeling)** | Modelagem & SQL DDL | Criação dos modelos Lógico/Físico e script de categorização em Python. |
+| **02** | **[SGV DataFlow: Gestão e Manipulação](./Fase2-SGV-DataFlow-Manager)** | Scripts DML/DQL & JSON | Carga de dados, relatórios SQL e integração de dados via script Python. |
+| **03** | **[SGV Secure: Automação e Privacidade](./Fase3-SGV-Secure-Logic-PLSQL)** | PL/SQL & LGPD | Automação de processamento de chamados (Cursores) e adequação à LGPD. |
+| **04** | **[SGV Analytics: Procedures e Estatística](./Fase4-SGV-Procedures-Statistics)** | Stored Procedures | Conversão de lógica para Procedure no Banco e análise estatística (histogramas). |
+| **05** | **[SGV NoSQL Booster: Performance](./Fase5-SGV-NoSQL-Booster)** | NoSQL & Python Pandas | Estudo de performance com bancos NoSQL e análise exploratória de dados (EDA). |
+| **06** | **[SGV BigData Universe: Arquitetura](./Fase6-SGV-BigData-Universe)** | Arquitetura Big Data | Desenho de solução de Data Lake, Pipelines de ingestão e gestão ágil. |
+| **07** | **[SGV Insights: Power BI](./Fase7-SGV-Insights-PowerBI)** | BI & Dashboards | Dashboards interativos de vendas e governança de dados sensíveis. |
 
-## O que é feito em cada fase
+---
 
-- **Fase 4**
+## O que é Feito em cada Fase
 
-  - Objetivo: Implementação de stored procedure (PL/SQL) e análise estatística de ocorrências (histograma).
-  - Notebook `ex_histograma.ipynb`: exploração inicial de dados com histogramas para entender distribuições.
-  - SQL `PR_SGV_CARGA_RESUMO_OCORR_SAC.sql`: rotina de carga/resumo de ocorrências SAC em base relacional.
+### 🔹 Fase 1: SGV Genesis
+* **Modelagem:** Elaboração completa do Diagrama Entidade-Relacionamento (DER) nos níveis lógico e físico.
+* **Database:** Script DDL (`Script_DDL_Melhores_Compras.sql`) para criação da estrutura inicial do banco Oracle.
+* **Lógica:** Desenvolvimento de algoritmo em Python para classificar o nível de satisfação do cliente (SAC).
 
-- **Fase 5**
-  - Objetivo: Proposição de soluções NoSQL para problemas de desempenho e análise estatística de vendas (Python).
-  - Notebook `FIAPandoDataScience_PBL_TSCOA_1o_Ano_Fase5.ipynb`: continuidade da análise da fase 4, preparação de dados e experimentação de modelos (conteúdo iterativo em notebook).
-- **Fase 6**
-  - Objetivo: Definição de uma arquitetura analítica Big Data.
-  - Espaço reservado para as próximas etapas (pipeline, avaliação ou deploy conforme o roteiro da disciplina).
-- **Fase 7**
-  - Objetivo: Análise de dados financeiros (Power BI/DAX) e classificação de tipos de dados.
-  - `data/Clientes.xml`: amostra de dados de clientes para testes finais.
-  - `reports/`: relatórios e saídas finais da fase de consolidação.
+### 🔹 Fase 2: SGV DataFlow
+* **Manipulação:** Scripts de população de dados (Insert/Update) e consultas analíticas (Selects complexos).
+* **Integração:** Script Python que lê dados brutos e gera arquivos JSON estruturados para integração entre sistemas.
+* **ESG:** Planejamento inicial de práticas de sustentabilidade corporativa.
 
+### 🔹 Fase 3: SGV Secure
+* **Automação:** Desenvolvimento de blocos anônimos PL/SQL utilizando cursores para varrer e processar registros do SAC.
+* **Regras de Negócio:** Classificação automática de tipos de chamados (Sugestão/Reclamação) via banco de dados.
+* **Privacidade:** Relatório de análise de impacto e adequação à Lei Geral de Proteção de Dados (LGPD).
+
+### 🔹 Fase 4: SGV Analytics
+* **Otimização:** Criação de *Stored Procedures* (`PR_SGV_...`) para encapsular a lógica de carga de dados, garantindo segurança e performance.
+* **Data Science:** Uso de Python (Jupyter Notebook) para gerar histogramas e analisar a frequência de ocorrências no atendimento.
+
+### 🔹 Fase 5: SGV NoSQL Booster
+* **Performance:** Prova de Conceito (PoC) comparando bancos Relacionais vs. NoSQL (Grafos, Colunar, Documentos) para cenários de alta demanda.
+* **Estatística:** Análise avançada de *outliers* e matriz de correlação de vendas utilizando Pandas e Seaborn.
+
+### 🔹 Fase 6: SGV BigData Universe
+* **Arquitetura:** Definição técnica de uma Arquitetura Lambda (Batch + Speed Layer) para Big Data.
+* **Engenharia:** Mapeamento de fontes de dados e desenho de pipelines de ingestão para o Data Lake.
+
+### 🔹 Fase 7: SGV Insights
+* **Visualização:** Desenvolvimento de Dashboards no Power BI para monitoramento de KPIs financeiros (Faturamento, Margem).
+* **Governança:** Classificação de dados corporativos (Mestre, Referência, Transacional) e mapeamento de sigilo.
+
+---
+
+## Tecnologias Principais
+* **Banco de Dados:** Oracle SQL, PL/SQL, NoSQL (Conceitual).
+* **Linguagem:** Python (Pandas, Matplotlib, JSON).
+* **Data Viz & BI:** Microsoft Power BI.
+* **Ferramentas:** Oracle Data Modeler, Jupyter Notebook, Excel.
+
+---
 ## Pré-requisitos
 
 - Python 3.10+
