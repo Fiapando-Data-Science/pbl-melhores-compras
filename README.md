@@ -36,20 +36,22 @@ Repositório do projeto PBL (Data Science/Engenharia de Dados) da empresa fictí
 * **Privacidade:** Relatório de análise de impacto e adequação à Lei Geral de Proteção de Dados (LGPD).
 
 ### 🔹 Fase 4: SGV Analytics
-* **Otimização:** Criação de *Stored Procedures* (`PR_SGV_...`) para encapsular a lógica de carga de dados, garantindo segurança e performance.
-* **Data Science:** Uso de Python (Jupyter Notebook) para gerar histogramas e analisar a frequência de ocorrências no atendimento.
+  - Objetivo: Implementação de stored procedure (PL/SQL) e análise estatística de ocorrências (histograma).
+  - Notebook `ex_histograma.ipynb`: exploração inicial de dados com histogramas para entender distribuições.
+  - SQL `PR_SGV_CARGA_RESUMO_OCORR_SAC.sql`: rotina de carga/resumo de ocorrências SAC em base relacional.
 
 ### 🔹 Fase 5: SGV NoSQL Booster
-* **Performance:** Prova de Conceito (PoC) comparando bancos Relacionais vs. NoSQL (Grafos, Colunar, Documentos) para cenários de alta demanda.
-* **Estatística:** Análise avançada de *outliers* e matriz de correlação de vendas utilizando Pandas e Seaborn.
+  - Objetivo: Proposição de soluções NoSQL para problemas de desempenho e análise estatística de vendas (Python).
+  - Notebook `FIAPandoDataScience_PBL_TSCOA_1o_Ano_Fase5.ipynb`: continuidade da análise da fase 4, preparação de dados e experimentação de modelos (conteúdo iterativo em notebook).
 
 ### 🔹 Fase 6: SGV BigData Universe
-* **Arquitetura:** Definição técnica de uma Arquitetura Lambda (Batch + Speed Layer) para Big Data.
-* **Engenharia:** Mapeamento de fontes de dados e desenho de pipelines de ingestão para o Data Lake.
+  - Objetivo: Definição de uma arquitetura analítica Big Data.
+  - Espaço reservado para as próximas etapas (pipeline, avaliação ou deploy conforme o roteiro da disciplina).
 
 ### 🔹 Fase 7: SGV Insights
-* **Visualização:** Desenvolvimento de Dashboards no Power BI para monitoramento de KPIs financeiros (Faturamento, Margem).
-* **Governança:** Classificação de dados corporativos (Mestre, Referência, Transacional) e mapeamento de sigilo.
+  - Objetivo: Análise de dados financeiros (Power BI/DAX) e classificação de tipos de dados.
+  - `data/Clientes.xml`: amostra de dados de clientes para testes finais.
+  - `reports/`: relatórios e saídas finais da fase de consolidação.
 
 ---
 
